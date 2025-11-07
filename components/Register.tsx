@@ -1,28 +1,28 @@
 "use client";
-import React, { useState } from 'react';
-import { Mail, Phone, User } from 'lucide-react';
+import React, { useState } from "react";
+import { Mail, Phone, User } from "lucide-react";
 
 export default function RegisterInterest() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: ''
+    name: "",
+    email: "",
+    phone: "",
   });
   const [agreed, setAgreed] = useState(false);
 
   const handleSubmit = () => {
     if (!agreed) {
-      alert('Please agree to the Privacy Policy');
+      alert("Please agree to the Privacy Policy");
       return;
     }
-    console.log('Form submitted:', formData);
-    alert('Thank you for registering your interest!');
+    console.log("Form submitted:", formData);
+    alert("Thank you for registering your interest!");
   };
 
-  const handleChange = (field, value) => {
+  const handleChange = (field: any, value: any) => {
     setFormData({
       ...formData,
-      [field]: value
+      [field]: value,
     });
   };
 
@@ -34,28 +34,28 @@ export default function RegisterInterest() {
           <div className="relative h-full min-h-[400px] md:min-h-[600px]">
             {/* Main large image */}
             <div className="absolute inset-10 rounded-3xl overflow-hidden shadow-lg border-4 border-white">
-              <img 
-                src="/img1.jpg" 
-                alt="Hotel" 
-                className="w-full h-full object-cover" 
+              <img
+                src="/img1.jpg"
+                alt="Hotel"
+                className="w-full h-full object-cover"
               />
             </div>
-            
+
             {/* Small top-right image */}
             <div className="absolute top-4 right-4 w-32 h-32 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
-              <img 
-                src="/img3.jpg" 
-                alt="Dubai Skyline" 
-                className="w-full h-full object-cover" 
+              <img
+                src="/img3.jpg"
+                alt="Dubai Skyline"
+                className="w-full h-full object-cover"
               />
             </div>
-            
+
             {/* Small bottom-left image */}
             <div className="absolute bottom-4 left-4 w-32 h-32 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
-              <img 
-                src="/img2.jpg" 
-                alt="Pool Area" 
-                className="w-full h-full object-cover" 
+              <img
+                src="/img2.jpg"
+                alt="Pool Area"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
@@ -76,7 +76,7 @@ export default function RegisterInterest() {
                   <input
                     type="text"
                     value={formData.name}
-                    onChange={(e) => handleChange('name', e.target.value)}
+                    onChange={(e) => handleChange("name", e.target.value)}
                     placeholder="Your Name"
                     className="w-full px-4 py-3 pr-10 border-2 border-gray-200 rounded-lg focus:border-rose-500 focus:outline-none transition-colors"
                   />
@@ -93,7 +93,7 @@ export default function RegisterInterest() {
                   <input
                     type="email"
                     value={formData.email}
-                    onChange={(e) => handleChange('email', e.target.value)}
+                    onChange={(e) => handleChange("email", e.target.value)}
                     placeholder="Your Email"
                     className="w-full px-4 py-3 pr-10 border-2 border-gray-200 rounded-lg focus:border-rose-500 focus:outline-none transition-colors"
                   />
@@ -110,7 +110,7 @@ export default function RegisterInterest() {
                   <input
                     type="tel"
                     value={formData.phone}
-                    onChange={(e) => handleChange('phone', e.target.value)}
+                    onChange={(e) => handleChange("phone", e.target.value)}
                     placeholder="Number"
                     className="w-full px-4 py-3 pr-10 border-2 border-gray-200 rounded-lg focus:border-rose-500 focus:outline-none transition-colors"
                   />
@@ -128,8 +128,11 @@ export default function RegisterInterest() {
                   className="mt-1 w-4 h-4 text-rose-700 border-gray-300 rounded focus:ring-rose-500"
                 />
                 <label htmlFor="privacy" className="text-sm text-gray-600">
-                  I agree to the{' '}
-                  <a href="#" className="text-rose-700 hover:underline font-semibold">
+                  I agree to the{" "}
+                  <a
+                    href="#"
+                    className="text-rose-700 hover:underline font-semibold"
+                  >
                     Privacy Policy
                   </a>
                 </label>
