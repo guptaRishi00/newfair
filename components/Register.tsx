@@ -27,7 +27,7 @@ export default function RegisterInterest() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 to-rose-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-linear-to-br from-amber-50 to-rose-50 flex items-center justify-center p-4">
       <div className="max-w-6xl w-full overflow-hidden">
         <div className="grid md:grid-cols-2 gap-0">
           {/* Image Section */}

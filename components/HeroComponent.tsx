@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import { MdArrowOutward } from "react-icons/md";
 
 const HeroComponent = () => {
   const [currentText, setCurrentText] = useState(0);
@@ -29,62 +30,65 @@ const HeroComponent = () => {
       {/* Main Content */}
       <div className="relative z-10 flex flex-col">
         {/* Logo - reduced top padding */}
-        <div className="flex justify-center pt-2 md:pt-3">
+        <div className="flex justify-center">
           <img
             src="/logo.png"
             alt="FairPro Logo"
-            className="h-36 md:h-44 w-auto"
+            className="w-[389.18410035622287px] absolute"
           />
         </div>
 
         {/* Hero content — your chosen parent height container */}
-        <div className="flex flex-col lg:flex-row items-center justify-between flex-1 px-6 md:px-16 lg:px-20 gap-6 md:gap-10 mt-0">
+        <div className="flex flex-col lg:flex-row mt-10 items-center justify-between flex-1 px-6 md:px-16 lg:px-20 gap-6">
           {/* Left Text Section */}
-          <div className="text-white max-w-xl text-center lg:text-left space-y-2 md:space-y-3">
-            <p className="text-base md:text-lg font-medium text-amber-200">
+          <div className="text-white w-full text-center lg:text-left space-y-2 md:space-y-3 mt-10 ">
+            <p className="text-xl md:text-xl font-bold text-white bg-[#FFFFFF2E] w-fit px-5 py-1 rounded-full">
               Tamil Nadu's Biggest Property Expo
             </p>
 
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-              Discover. Invest.{" "}
-              <span className="text-amber-300">Prosper.</span>
+            <h1 className="text-6xl max-w-xl font-extrabold leading-tight">
+              Discover. Invest. <span className="text-amber-300">Prosper.</span>
             </h1>
 
-            <p className="text-sm md:text-base font-medium uppercase leading-snug">
+            <p className="text-sm md:text-2xl max-w-xl font-medium uppercase leading-snug">
               <span className="font-bold">
-                LE MERIDIEN DUBAI HOTEL & CONFERENCE CENTRE
+                Join us at LE MERIDIEN DUBAI HOTEL & CONFERENCE CENTRE, Dubai
               </span>
             </p>
 
-            <p className="text-base md:text-xl font-semibold">
+            <p className="text-sm md:text-2xl max-w-xl font-medium uppercase leading-snug">
               29–30 November 2025
             </p>
 
-            <p className="text-xs md:text-sm text-white/90 leading-relaxed">
-              Explore 60+ Builders, 300+ RERA Approved Projects & Exclusive Deals
-              Under One Roof.
+            <p className="text-xl max-w-xl text-white/90 leading-relaxed font-medium">
+              Explore 60+ builders, 300+ RERA Approved Projects and exclusive
+              deals under one roof in Dubai.
             </p>
 
-            <button className="bg-amber-200 text-gray-900 font-semibold px-6 py-3 rounded-full shadow hover:bg-amber-300 transition text-sm md:text-base">
-              REGISTER NOW
-            </button>
+            <div className="w-full flex items-center">
+              <button className="bg-[#FFE0BA] text-[#890B31] font-bold px-6 py-3 rounded-full shadow hover:bg-amber-300 transition text-sm md:text-base">
+                REGISTER NOW
+              </button>
+              <span className="bg-[#FFE0BA] p-4 -ml-2 rounded-full">
+                <MdArrowOutward color="#890B31" />
+              </span>
+            </div>
           </div>
 
           {/* Right Man Image — scaled up to fill reduced height */}
-          <div className="relative w-full flex justify-center lg:justify-end">
+          <div className="relative w-full flex justify-center lg:justify-end ">
             <img
               src="/man.svg"
               alt="Man"
               className="
-                absolute
+                relative
                 lg:static
                 right-0
                 bottom-0
-                w-[170%] sm:w-[160%] md:w-[150%] lg:w-[130%] xl:w-[120%]
-                max-w-none
-                z-[5]
+                w-[1500px]   
                 pointer-events-none
                 object-contain
+                ml-60
               "
             />
           </div>

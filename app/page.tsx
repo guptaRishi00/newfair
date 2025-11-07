@@ -1,16 +1,17 @@
-import HeroComponent from '@/components/HeroComponent';
-import Register from '@/components/Register';
-import OpportunitiesHero from '@/components/Opportunity';
-import PropertyDiscovery from '@/components/Propertydiscovery';
-import AboutCredai from '@/components/About';
-import WhoCanAttend from '@/components/WhoCanAttend';
-import ExclusiveOpportunity from '@/components/ExclusiveOpportunity';
+import HeroComponent from "@/components/HeroComponent";
+import Register from "@/components/Register";
+import OpportunitiesHero from "@/components/Opportunity";
+import PropertyDiscovery from "@/components/Propertydiscovery";
+import AboutCredai from "@/components/About";
+import WhoCanAttend from "@/components/WhoCanAttend";
+import ExclusiveOpportunity from "@/components/ExclusiveOpportunity";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <main>
-       <div className="w-full">
-        <HeroComponent/>
+      <div className="w-full">
+        <HeroComponent />
         <Register />
         <OpportunitiesHero />
         <PropertyDiscovery />
@@ -18,9 +19,8 @@ export default function Home() {
         <WhoCanAttend />
         <ExclusiveOpportunity />
 
+        <Footer />
       </div>
-
-      
     </main>
   );
 }
